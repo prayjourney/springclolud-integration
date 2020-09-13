@@ -1,5 +1,6 @@
 package com.zgy.springcloud.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -20,6 +21,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @Accessors(chain = true)
 public class Police implements Serializable {
+    @TableId
     private Integer id;
     private String name;
     private String dbName;
