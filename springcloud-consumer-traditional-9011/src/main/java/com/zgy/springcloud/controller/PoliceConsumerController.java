@@ -25,6 +25,7 @@ public class PoliceConsumerController {
 
     @GetMapping("get")
     public Police get(Integer id){
+        log.info("准备从远程获取police, id是：{}!", id);
         return restTemplate.getForObject(restURL+"/police/get?id="+id, Police.class);
     }
 }
