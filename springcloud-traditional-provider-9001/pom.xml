@@ -11,7 +11,7 @@
     <groupId>com.zgy.springcloud</groupId>
     <artifactId>springcloud-provider-traditional-9001</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>springcloud-provider-traditional-9001</name>
+    <name>springcloud-traditional-provider-9001</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

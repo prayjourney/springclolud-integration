@@ -11,7 +11,7 @@
     <groupId>com.zgy.springcloud</groupId>
     <artifactId>springcloud-consumer-traditional-9011</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>springcloud-consumer-traditional-9011</name>
+    <name>springcloud-traditional-consumer-9011</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
