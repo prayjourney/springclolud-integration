@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zgy.springcloud</groupId>
-    <artifactId>springcloud-consumer-8601</artifactId>
+    <artifactId>springcloud-consumer-ribbon-8601</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>springcloud-consumer-8601</name>
+    <name>springcloud-consumer-ribbon-8601</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -31,6 +31,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!-- ribbon的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
         </dependency>
 
         <dependency>
