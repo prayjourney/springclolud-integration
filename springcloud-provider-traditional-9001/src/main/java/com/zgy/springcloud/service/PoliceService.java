@@ -1,5 +1,6 @@
 package com.zgy.springcloud.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.zgy.springcloud.mapper.PoliceMapper;
 import com.zgy.springcloud.pojo.Police;
 import lombok.extern.slf4j.Slf4j;
@@ -63,13 +64,10 @@ public class PoliceService {
         }
     }
 
-    public List<Police> getPolice(List<Integer> ids) {
-        if (null != ids) {
-            log.info("查询police, 时间是{}!", LocalDateTime.now());
-            return policeMapper.selectBatchIds(ids);
-        } else {
-            log.info("查询police, 信息为空, 时间是{}!", LocalDateTime.now());
-            return null;
-        }
+    public List<Police> getAllPolice() {
+        log.info("查询police, 时间是{}!", LocalDateTime.now());
+        QueryWrapper wrapper = new QueryWrapper();
+        wrapper.gt("id", 0);
+        return policeMapper.selectList(wrapper);
     }
 }

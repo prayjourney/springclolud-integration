@@ -50,7 +50,7 @@ public class PoliceController {
     }
 
 
-    @PostMapping("del")
+    @PostMapping("update")
     public int updatePolice(Police police) {
         if (police.getId() < 0) {
             log.info("修改police, 信息是：{}, 时间是{}!", police.toString(), LocalDateTime.now());
@@ -75,13 +75,8 @@ public class PoliceController {
 
 
     @GetMapping("getall")
-    public List<Police> getPolice(List<Integer> ids) {
-        if (null != ids) {
-            log.info("查询police, 时间是{}!", LocalDateTime.now());
-            return policeService.getPolice(ids);
-        } else {
-            log.info("查询police, 信息为空, 时间是{}!", LocalDateTime.now());
-            return null;
-        }
+    public List<Police> getAllPolice() {
+        log.info("查询police, 时间是{}!", LocalDateTime.now());
+        return policeService.getAllPolice();
     }
 }
