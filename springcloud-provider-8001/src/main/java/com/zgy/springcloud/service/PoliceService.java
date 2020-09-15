@@ -75,7 +75,7 @@ public class PoliceService {
         wrapper.gt("id", 0);
         List<Police> list = policeMapper.selectList(wrapper);
         if (list.size() == 0) {
-            // 一个提示手段，友好一点
+            // 一个提示方式，友好一点
             list.add(new Police().setId(-1).setName("查询内容不存在").setDbName("查询内容不存在"));
             return list;
         } else {

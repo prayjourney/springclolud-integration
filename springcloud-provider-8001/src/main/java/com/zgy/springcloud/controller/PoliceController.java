@@ -29,10 +29,10 @@ public class PoliceController {
     @PostMapping("add")
     public int addPolice(Police police) {
         if (null != police) {
-            log.info("插入police, 信息是：{}, 时间是{}!", police.toString(), LocalDateTime.now());
+            log.info("8001服务" + "插入police, 信息是：{}, 时间是{}!", police.toString(), LocalDateTime.now());
             return policeService.addPolice(police);
         } else {
-            log.info("插入police, 信息为空, 时间是{}!", LocalDateTime.now());
+            log.info("8001服务" + "插入police, 信息为空, 时间是{}!", LocalDateTime.now());
             return -1;
         }
     }
@@ -41,10 +41,10 @@ public class PoliceController {
     @GetMapping("del")
     public int delPolice(Integer id) {
         if (id > 0) {
-            log.info("删除police, id是：{}, 时间是{}!", id, LocalDateTime.now());
+            log.info("8001服务" + "删除police, id是：{}, 时间是{}!", id, LocalDateTime.now());
             return policeService.delPolice(id);
         } else {
-            log.info("删除police, 信息不存在, 时间是{}!", LocalDateTime.now());
+            log.info("8001服务" + "删除police, 信息不存在, 时间是{}!", LocalDateTime.now());
             return -1;
         }
     }
@@ -53,10 +53,10 @@ public class PoliceController {
     @PostMapping("update")
     public int updatePolice(Police police) {
         if (police.getId() < 0) {
-            log.info("修改police, 信息是：{}, 时间是{}!", police.toString(), LocalDateTime.now());
+            log.info("8001服务" + "修改police, 信息是：{}, 时间是{}!", police.toString(), LocalDateTime.now());
             return policeService.updatePolice(police);
         } else {
-            log.info("修改police, police信息不存在, 时间是{}!", LocalDateTime.now());
+            log.info("8001服务" + "修改police, police信息不存在, 时间是{}!", LocalDateTime.now());
             return -1;
         }
     }
@@ -65,10 +65,10 @@ public class PoliceController {
     @GetMapping("get")
     public Police getPolice(Integer id) {
         if (id > 0) {
-            log.info("查询police, 时间是{}!", LocalDateTime.now());
+            log.info("8001服务" + "查询police, 时间是{}!", LocalDateTime.now());
             return policeService.getPolice(id);
         } else {
-            log.info("查询police, 信息为空, 时间是{}!", LocalDateTime.now());
+            log.info("8001服务" + "查询police, 信息为空, 时间是{}!", LocalDateTime.now());
             return null;
         }
     }
@@ -76,7 +76,7 @@ public class PoliceController {
 
     @GetMapping("getall")
     public List<Police> getAllPolice() {
-        log.info("查询police, 时间是{}!", LocalDateTime.now());
+        log.info("8001服务" + "查询police, 时间是{}!", LocalDateTime.now());
         return policeService.getAllPolice();
     }
 }
