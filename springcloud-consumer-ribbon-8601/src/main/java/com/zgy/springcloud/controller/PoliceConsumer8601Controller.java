@@ -26,7 +26,7 @@ public class PoliceConsumer8601Controller {
 
     // 使用了Ribbon之后, 这个地址应该是一个变量，通过服务名来访问, 下面两种都可以
     // private static final String restURL = "http://springcloud-provider-8001";
-    private static final String restURL = "http://SPRINGCLOUD-PROVIDER-8001";
+    private static final String restURL = "http://SPRINGCLOUD-PROVIDER";
     @GetMapping("get")
     public Police get(Integer id) {
         log.info("准备从远程获取police, id是：{}!", id);
