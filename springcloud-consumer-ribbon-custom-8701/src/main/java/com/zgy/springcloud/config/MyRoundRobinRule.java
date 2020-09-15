@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class MyRoundRobinRule {
-    @Bean
+    @Bean(name = "myRule")
     public IRule myRule(){
         return new RoundRobinRule();
     }
