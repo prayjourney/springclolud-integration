@@ -25,7 +25,7 @@ public class PoliceConsumer8601Controller {
     // 上面是传统的方式，下面是通过注册中心的方式，就可以获取我们想要的信息了
 
     // 使用了Ribbon之后, 这个地址应该是一个变量，通过服务名来访问, 下面两种都可以
-    // private static final String restURL = "http://springcloud-provider-8001";
+    // private static final String restURL = "http://springcloud-provider";
     private static final String restURL = "http://SPRINGCLOUD-PROVIDER";
     @GetMapping("get")
     public Police get(Integer id) {
