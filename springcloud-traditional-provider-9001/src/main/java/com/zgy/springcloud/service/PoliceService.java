@@ -57,10 +57,15 @@ public class PoliceService {
     public Police getPolice(Integer id) {
         if (id > 0) {
             log.info("查询police, 时间是{}!", LocalDateTime.now());
-            return policeMapper.selectById(id);
+            Police police = policeMapper.selectById(id);
+            if (null == police) {
+                return new Police().setId(-1).setName("查询内容不存在").setDbName("查询内容不存在");
+            } else {
+                return police;
+            }
         } else {
             log.info("查询police, 信息为空, 时间是{}!", LocalDateTime.now());
-            return null;
+            return new Police().setId(-1).setName("查询内容不存在").setDbName("查询内容不存在");
         }
     }
 
@@ -68,6 +73,13 @@ public class PoliceService {
         log.info("查询police, 时间是{}!", LocalDateTime.now());
         QueryWrapper wrapper = new QueryWrapper();
         wrapper.gt("id", 0);
-        return policeMapper.selectList(wrapper);
+        List<Police> list = policeMapper.selectList(wrapper);
+        if (list.size() == 0) {
+            // 一个提示手段，友好一点
+            list.add(new Police().setId(-1).setName("查询内容不存在").setDbName("查询内容不存在"));
+            return list;
+        } else {
+            return list;
+        }
     }
 }
