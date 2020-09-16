@@ -10,7 +10,7 @@ import org.springframework.cloud.netflix.ribbon.RibbonClient;
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaClient
 // 使用自定义的负责均衡规则，name指的是对那个服务进行负载均衡
-@RibbonClient(name = "SPRINGCLOUD-PROVIDER-8001", configuration = MyRoundRobinRule.class)
+@RibbonClient(name = "SPRINGCLOUD-PROVIDER", configuration = MyRoundRobinRule.class)
 public class SpringcloudConsumer8701 {
 
     public static void main(String[] args) {
