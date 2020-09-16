@@ -13,9 +13,9 @@ import org.springframework.web.client.RestTemplate;
  */
 @Configuration
 public class ConfigBean {
-    // Ribbon客户端负载均衡
+    // Ribbon客户端负载均衡, Feign集成了Ribbon
     @Bean
-    @LoadBalanced
+    @LoadBalanced // 默认是轮循
     public RestTemplate getRestTemplate(){
         return new RestTemplate();
     }
