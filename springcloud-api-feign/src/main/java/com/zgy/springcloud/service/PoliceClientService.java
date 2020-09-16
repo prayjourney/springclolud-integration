@@ -1,9 +1,33 @@
 package com.zgy.springcloud.service;
 
+import com.zgy.springcloud.pojo.Police;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
+
 /**
  * @Author renjiaxin
  * @Date 2020/9/16
- * @Description
+ * @Description 该接口对应于应用id为SPRINGCLOUD-PROVIDER的微服务
  */
-public class PoliceClientService {
+// 该接口对应于应用id为SPRINGCLOUD-PROVIDER的微服务
+@FeignClient(value = "SPRINGCLOUD-PROVIDER")
+public interface PoliceClientService
+{
+    @PostMapping(value = "police/add")
+    public int addPolice(Police police);
+
+    @GetMapping(value = "police/del")
+    public int delPolice(Integer id);
+
+    @PostMapping(value = "police/update")
+    public int updatePolice(Police police);
+
+    @GetMapping(value = "police/get")
+    public Police getPolice(Integer id);
+
+    @GetMapping(value = "police/getall")
+    public List<Police> getAllPolice();
 }
