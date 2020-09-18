@@ -29,6 +29,11 @@
     </properties>
 
     <dependencies>
+        <!-- hystrix的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+        </dependency>
         <!-- actuator监控信息 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
