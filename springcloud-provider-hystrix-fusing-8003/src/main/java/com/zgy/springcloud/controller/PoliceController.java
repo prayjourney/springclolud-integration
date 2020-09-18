@@ -1,5 +1,6 @@
 package com.zgy.springcloud.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zgy.springcloud.pojo.Police;
 import com.zgy.springcloud.service.PoliceService;
 import lombok.extern.slf4j.Slf4j;
@@ -62,7 +63,9 @@ public class PoliceController {
     }
 
 
+    // 服务熔断时，会调用备用方法getPoliceFallback
     @GetMapping("get")
+    @HystrixCommand(defaultFallback = "getPoliceFallback")
     public Police getPolice(Integer id) {
         if (id > 0) {
             log.info("8002服务" + "查询police, 时间是{}!", LocalDateTime.now());
@@ -78,5 +81,11 @@ public class PoliceController {
     public List<Police> getAllPolice() {
         log.info("8002服务" + "查询police, 时间是{}!", LocalDateTime.now());
         return policeService.getAllPolice();
+    }
+
+
+    // 备选方法
+    public Police getPoliceFallback(Integer id){
+        return policeService.getPolice(id);
     }
 }
