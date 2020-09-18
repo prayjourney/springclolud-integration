@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zgy.springcloud</groupId>
-    <artifactId>springcloud-feign-api</artifactId>
+    <artifactId>springcloud-api-feign</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>springcloud-feign-api</name>
+    <name>springcloud-api-feign</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
