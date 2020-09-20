@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zgy.springcloud</groupId>
-    <artifactId>springcloud-provider-hystrix-demote-8004</artifactId>
+    <artifactId>springcloud-provider-demote-8004</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>springcloud-provider-hystrix-demote-8004</name>
+    <name>springcloud-provider-demote-8004</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -29,11 +29,6 @@
     </properties>
 
     <dependencies>
-        <!-- hystrix的依赖 -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
         <!-- actuator监控信息 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
