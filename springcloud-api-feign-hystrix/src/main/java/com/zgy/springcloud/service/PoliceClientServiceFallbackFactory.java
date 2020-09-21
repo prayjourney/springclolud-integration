@@ -17,7 +17,7 @@ public class PoliceClientServiceFallbackFactory implements FallbackFactory {
 
     @Override
     public Object create(Throwable throwable) {
-        return new PoliceClientService() {
+        return new PoliceClientHystrixService() {
             @Override
             public int addPolice(Police police) {
                 return -1;
