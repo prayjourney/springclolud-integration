@@ -17,8 +17,8 @@ import org.springframework.web.client.RestTemplate;
  */
 @Slf4j
 @RestController
-@RequestMapping("consumer8801/police")
-public class PoliceConsumer8801FeignController {
+@RequestMapping("consumer8901/police")
+public class PoliceConsumer8901FeignController {
     @Autowired
     private RestTemplate restTemplate;
 
