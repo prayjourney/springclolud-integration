@@ -63,9 +63,11 @@ public class PoliceController {
     }
 
 
+    // 熔断需要使用到的方法，放在service层吧，在controller层不好使啊！
+    // https://blog.csdn.net/cnm____1314/article/details/80049245
     // 服务熔断时，会调用备用方法getPoliceFallback
     @GetMapping("get")
-    @HystrixCommand(defaultFallback = "getPoliceFallback")
+    //@HystrixCommand(defaultFallback = "getPoliceFallback")
     public Police getPolice(Integer id) {
         if (id > 0) {
             log.info("8002服务" + "查询police, 时间是{}!", LocalDateTime.now());
@@ -84,8 +86,9 @@ public class PoliceController {
     }
 
 
+    // 熔断需要使用到的方法，放在service层吧，在controller层不好使啊！
     // 备选方法
-    public Police getPoliceFallback(Integer id){
-        return policeService.getPolice(id);
-    }
+    // public Police getPoliceFallback(Integer id){
+    //    return new Police().setId(-1).setName("查询内容不存在").setDbName("查询内容不存在, 我是8002服务");
+    // }
 }
