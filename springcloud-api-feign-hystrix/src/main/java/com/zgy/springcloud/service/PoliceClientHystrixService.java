@@ -22,8 +22,7 @@ import java.util.List;
  */
 // contextId = "springcloud-hystrix" 添加了contextId貌似并没有什么作用 https://github.com/spring-cloud/spring-cloud-openfeign/pull/90
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER", fallbackFactory =
-        PoliceClientServiceFallbackFactory.class)
+@FeignClient(value = "SPRINGCLOUD-PROVIDER", fallbackFactory = PoliceClientServiceFallbackFactory.class)
 public interface PoliceClientHystrixService {
     @PostMapping(value = "/police/add")
     public int addPolice(@RequestBody Police police);
