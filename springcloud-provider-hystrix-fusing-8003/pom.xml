@@ -124,10 +124,10 @@
             <version>${jackson.version}</version>
         </dependency>
 
-        <!-- api依赖 -->
+        <!-- springcloud-api-feign依赖 -->
         <dependency>
             <groupId>com.zgy.springcloud</groupId>
-            <artifactId>springcloud-api</artifactId>
+            <artifactId>springcloud-api-feign</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
