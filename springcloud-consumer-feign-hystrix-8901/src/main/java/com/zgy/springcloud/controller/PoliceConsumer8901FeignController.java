@@ -1,7 +1,7 @@
 package com.zgy.springcloud.controller;
 
 import com.zgy.springcloud.pojo.Police;
-import com.zgy.springcloud.service.PoliceClientService;
+import com.zgy.springcloud.service.PoliceClientHystrixService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,10 +33,10 @@ public class PoliceConsumer8901FeignController {
     // return restTemplate.getForObject(restURL + "/police/get?id=" + id, Police.class);
 
     @Autowired
-    PoliceClientService policeClientService;
+    PoliceClientHystrixService policeClientHystrixService;
     @GetMapping("get")
     public Police get(Integer id) {
         log.info("准备从远程获取police, id是：{}!", id);
-        return policeClientService.getPolice(id);
+        return policeClientHystrixService.getPolice(id);
     }
 }
