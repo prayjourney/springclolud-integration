@@ -7,8 +7,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
-@EnableEurekaClient
-@EnableFeignClients(basePackages = {"com.zgy.springcloud"})
 public class SpringcloudHystrixDashboard9990 {
 
     public static void main(String[] args) {
