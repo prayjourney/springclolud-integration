@@ -119,7 +119,7 @@
             <version>${jackson.version}</version>
         </dependency>
 
-        <!-- api依赖 -->
+        <!-- springcloud-api-feign-hystrix依赖 -->
         <dependency>
             <groupId>com.zgy.springcloud</groupId>
             <artifactId>springcloud-api-feign-hystrix</artifactId>
