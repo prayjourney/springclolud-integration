@@ -1,7 +1,6 @@
 package com.zgy.springcloud.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zgy.springcloud.mapper.PoliceMapper;
 import com.zgy.springcloud.pojo.Police;
 import lombok.extern.slf4j.Slf4j;
@@ -55,8 +54,6 @@ public class PoliceService {
         }
     }
 
-    // https://blog.csdn.net/cnm____1314/article/details/80049245
-    @HystrixCommand(fallbackMethod = "getPoliceFallback")
     public Police getPolice(Integer id) {
         if (id > 0) {
             log.info("查询police, 时间是{}!", LocalDateTime.now());
@@ -84,10 +81,5 @@ public class PoliceService {
         } else {
             return list;
         }
-    }
-
-    // 备用方法
-    public Police getPoliceFallback(Integer id) {
-        return new Police().setId(-1).setName("查询内容不存在").setDbName("查询内容不存在, 我是8002服务");
     }
 }
