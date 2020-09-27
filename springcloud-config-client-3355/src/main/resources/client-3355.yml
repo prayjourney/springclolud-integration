@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+
+
+---
+server:
+  port: 3355
+spring:
+  profiles: dev
+  application:
+    name: config-client-3355-dev
+
+
+---
+server:
+  port: 3355
+spring:
+  profiles: test
+  application:
+    name: config-client-3355-test
+
+
+# 说明
+## 最上面的spring.profiles.active: dev, 这个是一个默认的配置，我们实际使用的时候，因为在下面有不同的文档块，所以可以按照各自的profiles
+## 来让其起作用，具体的起作用，其实还是要在每个项目的配置之中才能让其发挥作用，比如在bootstrap.yml，我们在spring.cloud.config.profile: test
+## 这样就可以让其中的test配置模块起作用，如果是spring.cloud.config.profile: dev那么就会让dev文档块起作用。这个是由config的配置起作用的，
+## 我们client-sever的作用，只不过是一个集中的管理，然后他会和远端的git仓库链接，远端的git仓库专门存放各种配置xxx.yml，xxx.properties

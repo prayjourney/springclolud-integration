@@ -8,3 +8,5 @@ spring:
 
 # 实际就是访问的方式，http://localhost:3344/master/client-3355-dev.yml, 首先要在这个config的配置的地方，添加一个client-3355.yml文档
 # bootstrap是系统级别的配置，application.yml或者application.properties是用户级别的配置，使用的时候，先加载bootstrap
+
+# 差别，差别
