@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: dev
+
+port7001: 7001
+port7002: 7002
+port7003: 7003
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:${port7001}/eureka,http://eureka7002.com:${port7002}/eureka,http://eureka7003.com:${port7003}/eureka
+
+---
+server:
+  port: 8991
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config-consumer-ribbon-8991
+logging:
+  file:
+    path: /web/tomcat/logs/${spring.application.name}
+
+
+---
+server:
+  port: 8991
+spring:
+  profiles: test
+  application:
+    name: springcloud-config-consumer-ribbon-8991
+logging:
+  file:
+    path: /web/tomcat/logs/${spring.application.name}
+
+
+---
+server:
+  port: 8991
+spring:
+  profiles: prod
+  application:
+    name: springcloud-config-consumer-ribbon-8991
+logging:
+  file:
+    path: /web/tomcat/logs/${spring.application.name}
