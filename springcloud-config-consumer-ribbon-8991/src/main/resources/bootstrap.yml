@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      name: springcloud-config-consumer-ribbon-8991
+      profile: test
+      label: master
+      uri: http://localhost:3344

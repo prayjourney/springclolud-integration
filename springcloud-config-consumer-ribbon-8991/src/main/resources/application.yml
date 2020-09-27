@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: springcloud-config-consumer-ribbon-8991
