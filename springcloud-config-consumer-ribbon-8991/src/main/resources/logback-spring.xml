@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
 	<springProperty scope="context" name="LOG_PATH" source="logging.file.path"
-					defaultValue="/web/tomcat/logs/springcloud-consumer-ribbon-8601"/>
+					defaultValue="/web/tomcat/logs/springcloud-config-consumer-ribbon-8991"/>
 	<appender name="STD_OUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
 			<charset>UTF-8</charset>
@@ -60,6 +60,6 @@
 		</root>
 	</springProfile>
 
-	<logger name="springcloud-provider-traditional-9001" level="DEBUG"/>
+	<logger name="springcloud-config-consumer-ribbon-8991" level="DEBUG"/>
 	<logger name="sql" level="DEBUG"/>
 </configuration>
