@@ -2,7 +2,7 @@ spring:
   cloud:
     config:
       name: client-3355
-      profile: dev
+      profile: test
       label: master
       uri: http://localhost:3344
 
