@@ -1,0 +1,1 @@
+远程的git仓库是：https://gitee.com/zuiguangyin123/mygit-configs.git

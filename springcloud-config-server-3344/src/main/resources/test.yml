@@ -2,7 +2,7 @@ spring:
   profiles:
     active: dev
 
-
+# 上面的是默认激活配置，如果client服务的配置之中没有指明激活那个profile, 那么这个时候，就会直接取到此处的默认激活配置，当前是dev
 ---
 spring:
   profiles: dev
