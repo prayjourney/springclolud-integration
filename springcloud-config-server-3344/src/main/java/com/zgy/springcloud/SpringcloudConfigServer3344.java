@@ -10,10 +10,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer // 开启ConfigServer的服务
 //@EnableEurekaClient // 服务启动后自动注册到eureka注册中心
 //@EnableDiscoveryClient // 服务可以被发现
-public class SpringcloudConfigServer3344Application {
+public class SpringcloudConfigServer3344 {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudConfigServer3344Application.class, args);
+        SpringApplication.run(SpringcloudConfigServer3344.class, args);
     }
 
 }
