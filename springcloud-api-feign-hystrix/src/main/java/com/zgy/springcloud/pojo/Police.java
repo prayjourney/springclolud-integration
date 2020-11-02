@@ -3,8 +3,9 @@ package com.zgy.springcloud.pojo;
 import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.Accessors;
 
 import java.io.Serializable;
@@ -15,7 +16,8 @@ import java.io.Serializable;
  * @Date: Created in 2020/9/13 16:55
  * @Modified by:
  */
-@Data
+@Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
